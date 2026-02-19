@@ -1,0 +1,62 @@
+--------- Chapter 1: Getting Started
+
+/app: Contains all the routes, components, and logic for your application, this is where you'll be mostly working from.
+/app/lib: Contains functions used in your application, such as reusable utility functions and data fetching functions.
+/app/ui: Contains all the UI components for your application, such as cards, tables, and forms. To save time, we've pre-styled these components for you.
+/public: Contains all the static assets for your application, such as images.
+Config Files: You'll also notice config files such as next.config.ts at the root of your application. Most of these files are created and pre-configured when you start a new project using create-next-app. You will not need to modify them in this course.
+
+mockAPI for placeholder data (mock REST calls) if db or real API not ready
+
+If you're a TypeScript developer for better type-safety, we recommend
+Prisma (postgres db manager) or Drizzle ORM (object relational mapping)
+which automatically generates types based on your database schema.
+
+Next.js also comes with a TypeScript plugin for your code editor, to help with auto-completion and type-safety.
+To add TypeScript to an existing project, rename a file to .ts / .tsx.
+Run next dev and next build to automatically install the necessary dependencies 
+and add a tsconfig.json file with the recommended config options.
+
+install project packages
+>npm i
+start dev server (http://localhost:3000)
+>npm run dev
+
+--------- Chapter 2: CSS
+
+Next.js prompts for Tailwind usage when create-next-app is used.
+Tailwind package allows for styling components directly via classNames.
+
+CSS modules (.module.css file extension) help to avoid style clashes
+via automatic creation of unique class names.
+Supported in Next.js via webpack and Turbopack (next dev --turbo).
+
+clsx package allows for conditional styling of component.
+
+Other approaches Sass, CSS-in-JS libs like emotion, styled-jsx, styled-components ..
+
+--------- Chapter 3: Optimizing Fonts and images
+
+Next.js downloads font files at build time and hosts with other static assets.
+
+Static assets like images stored in /public can be referenced in code via /filename
+The Image component auto-resizes, lazy-loads, and supports webp/avif formats.
+Good practice to manually set width and height to prevent layout shift.
+
+--------- Chapter 4: Creating Layouts and Pages
+
+File-system routing uses folders to create nested routes.
+Folders represent route segments that map to URL segments.
+Only "page" and "route" files will ever be publicly accessible.
+
+Page components re-render on navigation, but layouts do not.
+A root layout is required for all Next.js apps and any UI added to the root
+will be shared across all pages in the application.
+
+--------- Chapter 5: Navigating Between Pages
+
+<Link /> components used for client-side transitions (avoid page reload).
+Code for Link'd routes are also prefetched when Links appear in viewport.
+
+--------- Chapter 6: Setting Up Your database
+
