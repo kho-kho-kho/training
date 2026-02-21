@@ -60,3 +60,13 @@ Code for Link'd routes are also prefetched when Links appear in viewport.
 
 --------- Chapter 6: Setting Up Your database
 
+Vercel supports GitHub repo connectivity for instant deployments.
+Vercel's marketplace includes native storage solutions compatible w AWS.
+Free tier includes  (very roughly) 1MM requests/mo and 100GB transfer/mo
+
+Create Postgres db via Vercel > export credentials > seed db > test query
+
+--------- Chapter 7: Fetching Data
+
+Next.js uses Route Handlers for creating API endpoints.
+postgres.js lib provides protection against SQL injections.
