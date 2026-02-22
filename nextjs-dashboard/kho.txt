@@ -70,3 +70,4 @@ Create Postgres db via Vercel > export credentials > seed db > test query
 
 Next.js uses Route Handlers for creating API endpoints.
 postgres.js lib provides protection against SQL injections.
+https://github.com/porsager/postgres?tab=readme-ov-file
