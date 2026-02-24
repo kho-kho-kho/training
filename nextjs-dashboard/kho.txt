@@ -76,3 +76,28 @@ Next.js apps use React Server Components to fetch backend data.
 Server Components support js Promises and run entirely on backend.
 
 --------- Chapter 8: Static and Dynamic Rendering
+
+Static rendering happens on server at build/deploy or during data revalidation.
+Prerendered content can be cached and globally distributed for speed, and
+makes it easier for search engine crawlers to index for improved SEO.
+
+With dynamic rendering your app is only as fast as your slowest data fetch.
+
+--------- Chapter 9: Streaming
+
+loading.tsx allows you to create a fallback UI while dynamic page content loads.
+Static rendered components like <SideNav> are shown immediately.
+User can navigate away without waiting for page to load (interruptable navigation)
+
+Route groups allow you to organize files into logical groups using () folders.
+Any folder name surrounded by parens won't be included in the URL path.
+
+React Suspense components allow rendering to be deferred for individual components.
+
+Streaming whole pages via loading.tsx is easy, but slow loading components
+can cause the entire page as a whole to load slow.
+Every single component can be streamed independently, but can create a "popping"
+visual into the screen which may be jarring to user.
+Wrapper components allow for a "staggering" effect by separating page sections.
+
+--------- Chapter 10: Adding Search and Pagination
