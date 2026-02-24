@@ -9,7 +9,13 @@ import {
 } from './definitions';
 import { formatCurrency } from './utils';
 
-const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
+const sql = postgres({
+  host      : process.env.POSTGRES_HOST!,
+  database  : process.env.POSTGRES_DATABASE!,
+  username  : process.env.POSTGRES_USER!,
+  password  : process.env.POSTGRES_PASSWORD!,
+  ssl       : 'require'
+});
 
 export async function fetchRevenue() {
   try {
