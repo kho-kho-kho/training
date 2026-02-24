@@ -101,3 +101,14 @@ visual into the screen which may be jarring to user.
 Wrapper components allow for a "staggering" effect by separating page sections.
 
 --------- Chapter 10: Adding Search and Pagination
+
+Debouncing limits the rate at which a function can fire IE: want to avoid
+kicking off a database search request every time user types in single char.
+> npm i use-debounce
+
+useSearchParams, usePathname, and useRouter are helpful Next.js client hooks
+used to implement search functionality. 
+searchParams can be used to construct URLSearchParams which allows for
+manipulation of URL query parameters and useRouter.replace enables navigation.
+
+--------- Chapter 11: Mutating Data
