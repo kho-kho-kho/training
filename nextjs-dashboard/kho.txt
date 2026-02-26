@@ -14,7 +14,7 @@ which automatically generates types based on your database schema.
 
 Next.js also comes with a TypeScript plugin for your code editor, to help with auto-completion and type-safety.
 To add TypeScript to an existing project, rename a file to .ts / .tsx.
-Run next dev and next build to automatically install the necessary dependencies 
+Run next dev and next build to automatically install the necessary dependencies
 and add a tsconfig.json file with the recommended config options.
 
 install project packages
@@ -107,8 +107,23 @@ kicking off a database search request every time user types in single char.
 > npm i use-debounce
 
 useSearchParams, usePathname, and useRouter are helpful Next.js client hooks
-used to implement search functionality. 
+used to implement search functionality.
 searchParams can be used to construct URLSearchParams which allows for
 manipulation of URL query parameters and useRouter.replace enables navigation.
 
 --------- Chapter 11: Mutating Data
+
+React Server Actions in a 'use server' file that are ultimately not used in any
+client/server component(s) will be auto-excluded from the final app bundle.
+Server Actions can also be written directly inside server components by adding
+"use server" inside of the function.
+SAs allow for "progressive enhancement" IE: users can interact w forms even if
+the client-side JavaScript hasn't loaded for whatever reason.
+
+Zod is a TypeScript-first validation lib that helps handle type validation.
+
+Next.js has a function revalidatePath which clears a cached route segment from
+the user's browser, and triggers a new request for server data. This is needed
+when creating/updating items.
+
+--------- Chapter 12: Handling Errors
