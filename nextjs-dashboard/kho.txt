@@ -133,3 +133,21 @@ adding try/catch blocks.
 The notFound function takes precedence over error.tsx.
 
 --------- Chapter 13: Improving Accessibility
+
+Can add eslint with Next.js' config to help catch accessibility issues
+> npm add --save-dev eslint eslint-config-next
+Then create eslint.config.mjs file in project root with example content.
+package.json > "scripts" needs to include "lint: "eslint ."
+Then you can lint from terminal
+> npm lint
+
+Project already exercises 3 principles of accessibility in form entry:
+Using semantic elements (<input>, <option>, etc) instead of <div> for context.
+Including <label> and htmlFor attr ensures form fields have desc text labels.
+Properly styling fields to show an outline when active element is in focus.
+
+Client-side validation is done via adding "required" attr to <input> elements.
+Server-side validations didn't seem very initially straight-forward ..
+best to refer back to code and example in future.
+
+--------- Chapter 14: Adding Authentication
