@@ -127,3 +127,9 @@ the user's browser, and triggers a new request for server data. This is needed
 when creating/updating items.
 
 --------- Chapter 12: Handling Errors
+
+The redirect function works by throwing an error, so be mindful of that when
+adding try/catch blocks.
+The notFound function takes precedence over error.tsx.
+
+--------- Chapter 13: Improving Accessibility
