@@ -170,4 +170,11 @@ Example uses the Credentials provider, but NextAuth.js supports many more.
 bcrypt was initially used to hash the sole user's password before inserting.
 It is used again here to compare the login form input w what's stored in db.
 
+Email: user@nextmail.com
+Password: 123456
+
 --------- Chapter 15: Adding Metadata
+
+Metadata can be added programmatically via configs in layout.js or page.js.
+It can also be added via special files (favicon.ico etc) inside the /app dir.
+Next.js provides various ways to add metadata so can refer to official docs.
