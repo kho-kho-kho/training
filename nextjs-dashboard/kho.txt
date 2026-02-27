@@ -151,3 +151,23 @@ Server-side validations didn't seem very initially straight-forward ..
 best to refer back to code and example in future.
 
 --------- Chapter 14: Adding Authentication
+
+Authentication: prove you are who you say you are
+Authorization: what are you permitted to do after authenticating?
+
+Install NextAuth.js (beta compatible w Next.js 14+)
+> npm i next-auth@beta
+Then generate secret key for encrypting cookies:
+https://generate-secret.vercel.app/32
+and store it in .env > AUTH_SECRET
+In production Vercel you'll also need to add/update env variables there too.
+
+Next.js Proxy runs code on the server to verify if a request is authorized
+to access a page before the request is actually completed. Proxy executes
+before routes are rendered and useful for implementing auth, loggin, redirects.
+
+Example uses the Credentials provider, but NextAuth.js supports many more.
+bcrypt was initially used to hash the sole user's password before inserting.
+It is used again here to compare the login form input w what's stored in db.
+
+--------- Chapter 15: Adding Metadata
